@@ -5,9 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Municipal_App"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Background="#f0f4f8">
     <Grid>
-        <Button x:Name="btnReport" Width="200" Height="60" Click="btnReport_Click">Report an Issue</Button>
+        <Rectangle Fill="#2D9CDB" Height="120" VerticalAlignment="Top" Opacity="0.8" />
 
+        <TextBlock Text="Municipal App" Foreground="White" FontSize="50" FontWeight="Bold"
+                   HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0"/>
+
+        <Button x:Name="btnReport" Width="240" Height="60" 
+                Click="btnReport_Click" Content="Report an Issue" 
+                Margin="280,130,280,0" VerticalAlignment="Top" 
+                Background="#2D9CDB" Foreground="White" FontSize="20" 
+                FontWeight="Bold" BorderBrush="Transparent" 
+                Padding="10" Opacity="0.8"/>
+
+        <Button x:Name="btnEvents" Width="240" Height="60" 
+            Content="Local Events" 
+            Margin="280,217,280,0" VerticalAlignment="Top" 
+            Background="#2D9CDB" Foreground="White" FontSize="20" 
+            FontWeight="Bold" BorderBrush="Transparent" 
+            Padding="10" Opacity="0.8"  />
+
+        <Button x:Name="btnStatus" Width="240" Height="60" 
+            Content="Service Request Status" 
+            Margin="280,303,280,0" VerticalAlignment="Top" 
+            Background="#2D9CDB" Foreground="White" FontSize="20" 
+            FontWeight="Bold" BorderBrush="Transparent" 
+            Padding="10" Opacity="0.8"  />
     </Grid>
 </Window>

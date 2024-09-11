@@ -12,6 +12,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
+using System.Drawing;
+using Microsoft.Win32;
+using Color = System.Drawing.Color;
+//using Color = System.Windows.Media.Color;
 
 namespace Municipal_App
 {
@@ -22,13 +27,16 @@ namespace Municipal_App
     {
         public static List<Issue> issues = new List<Issue>();
 
+        static BitmapImage selectedImage;
+
         public ReportIssuesWindow()
         {
             InitializeComponent();
 
             ConnectionViewModel vm = new ConnectionViewModel();
             DataContext = vm;
-
+            
+            
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
@@ -37,7 +45,24 @@ namespace Municipal_App
             string category = cmbCategory.Text;
             string description = ConvertRichTextBoxContentsToString(rtbDetails);
 
-            issues.Add(new Issue(location, category, description));
+            if (location == "" || category == "" || description == "")
+            {
+                lblFeedback.Foreground = new SolidColorBrush(Colors.Red);
+                lblFeedback.Content = "Please enter all fields";
+                return;
+            }
+
+            if (selectedImage == null)
+            {
+                issues.Add(new Issue(location, category, description));
+            }
+            else
+            {
+                issues.Add(new Issue(location, category, description, selectedImage));
+            }
+
+            lblFeedback.Foreground = new SolidColorBrush(Colors.Green);
+            lblFeedback.Content = "Your issue was saved successfully";
         }
 
         private string ConvertRichTextBoxContentsToString(RichTextBox rtb)
@@ -45,10 +70,35 @@ namespace Municipal_App
             TextRange textRange = new TextRange(rtb.Document.ContentStart, rtb.Document.ContentEnd);
             return textRange.Text;
         }
+
+        private void btnImage_Click(object sender, RoutedEventArgs e)
+        {
+            //Title: display image into picturebox in c# windows application 4.6
+            //Author: Haritha Computers and Technology
+            //Date published: 31 May 2018
+            //Available: https://www.youtube.com/watch?v=prfTc0SzjwE
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Image Files(*.jpg; *.jpeg; *.png;)|*.jpg; *.jpeg; *.png;";
+            if (ofd.ShowDialog() == true)
+            {
+                selectedImage = new BitmapImage(new Uri(ofd.FileName));
+                ivPicture.Source = selectedImage;
+            }
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow win = new MainWindow();
+            win.Show();
+
+        }
+        
     }
 
-
-    //https://stackoverflow.com/questions/561166/binding-a-wpf-combobox-to-a-custom-list
+    //Title: Binding a WPF ComboBox to a custom list
+    //Author: Kjetil Watnedal
+    //Date: 18 February 2009
+    //Availabilty: https://stackoverflow.com/questions/561166/binding-a-wpf-combobox-to-a-custom-list
     public class ConnectionViewModel : INotifyPropertyChanged
     {
         public ConnectionViewModel()

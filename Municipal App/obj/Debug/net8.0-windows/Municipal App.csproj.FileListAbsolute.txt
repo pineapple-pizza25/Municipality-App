@@ -15,6 +15,7 @@ C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.AssemblyInfoInputs.cache
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.AssemblyInfo.cs
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.csproj.CoreCompileInputs.cache
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.sourcelink.json
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.dll
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\refint\Municipal App.dll
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.pdb
