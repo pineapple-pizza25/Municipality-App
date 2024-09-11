@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\snmis\\source\\repos\\Municipal App\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{34654871-470E-4DF0-BDAC-B47DD8534C21}|Municipal App\\Municipal App.csproj|c:\\users\\snmis\\source\\repos\\municipal app\\municipal app\\reportissueswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34654871-470E-4DF0-BDAC-B47DD8534C21}|Municipal App\\Municipal App.csproj|solutionrelative:municipal app\\reportissueswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34654871-470E-4DF0-BDAC-B47DD8534C21}|Municipal App\\Municipal App.csproj|c:\\users\\snmis\\source\\repos\\municipal app\\municipal app\\reportissueswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{34654871-470E-4DF0-BDAC-B47DD8534C21}|Municipal App\\Municipal App.csproj|solutionrelative:municipal app\\reportissueswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34654871-470E-4DF0-BDAC-B47DD8534C21}|Municipal App\\Municipal App.csproj|c:\\users\\snmis\\source\\repos\\municipal app\\municipal app\\issue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34654871-470E-4DF0-BDAC-B47DD8534C21}|Municipal App\\Municipal App.csproj|solutionrelative:municipal app\\issue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34654871-470E-4DF0-BDAC-B47DD8534C21}|Municipal App\\Municipal App.csproj|c:\\users\\snmis\\source\\repos\\municipal app\\municipal app\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34654871-470E-4DF0-BDAC-B47DD8534C21}|Municipal App\\Municipal App.csproj|solutionrelative:municipal app\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34654871-470E-4DF0-BDAC-B47DD8534C21}|Municipal App\\Municipal App.csproj|c:\\users\\snmis\\source\\repos\\municipal app\\municipal app\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34654871-470E-4DF0-BDAC-B47DD8534C21}|Municipal App\\Municipal App.csproj|solutionrelative:municipal app\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34654871-470E-4DF0-BDAC-B47DD8534C21}|Municipal App\\Municipal App.csproj|c:\\users\\snmis\\source\\repos\\municipal app\\municipal app\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{34654871-470E-4DF0-BDAC-B47DD8534C21}|Municipal App\\Municipal App.csproj|solutionrelative:municipal app\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Issue.cs",
+              "DocumentMoniker": "C:\\Users\\snmis\\source\\repos\\Municipal App\\Municipal App\\Issue.cs",
+              "RelativeDocumentMoniker": "Municipal App\\Issue.cs",
+              "ToolTip": "C:\\Users\\snmis\\source\\repos\\Municipal App\\Municipal App\\Issue.cs",
+              "RelativeToolTip": "Municipal App\\Issue.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T08:11:49.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReportIssuesWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\snmis\\source\\repos\\Municipal App\\Municipal App\\ReportIssuesWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Municipal App\\ReportIssuesWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\snmis\\source\\repos\\Municipal App\\Municipal App\\ReportIssuesWindow.xaml.cs",
+              "RelativeToolTip": "Municipal App\\ReportIssuesWindow.xaml.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAIAywCEAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T06:24:21.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\snmis\\source\\repos\\Municipal App\\Municipal App\\Category.cs",
+              "RelativeDocumentMoniker": "Municipal App\\Category.cs",
+              "ToolTip": "C:\\Users\\snmis\\source\\repos\\Municipal App\\Municipal App\\Category.cs",
+              "RelativeToolTip": "Municipal App\\Category.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T19:03:53.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReportIssuesWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\snmis\\source\\repos\\Municipal App\\Municipal App\\ReportIssuesWindow.xaml",
+              "RelativeDocumentMoniker": "Municipal App\\ReportIssuesWindow.xaml",
+              "ToolTip": "C:\\Users\\snmis\\source\\repos\\Municipal App\\Municipal App\\ReportIssuesWindow.xaml",
+              "RelativeToolTip": "Municipal App\\ReportIssuesWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-10T18:32:58.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\snmis\\source\\repos\\Municipal App\\Municipal App\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Municipal App\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\snmis\\source\\repos\\Municipal App\\Municipal App\\MainWindow.xaml",
+              "RelativeToolTip": "Municipal App\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-10T18:28:58.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\snmis\\source\\repos\\Municipal App\\Municipal App\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Municipal App\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\snmis\\source\\repos\\Municipal App\\Municipal App\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Municipal App\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAIAwwBoAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T18:28:54.783Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

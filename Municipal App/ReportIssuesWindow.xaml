@@ -1,0 +1,46 @@
+﻿<Window
+    x:Class="Municipal_App.ReportIssuesWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Municipal_App"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="ReportIssuesWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Grid>
+        <TextBox
+            x:Name="txtLocation"
+            Width="120"
+            Margin="148,54,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="TextBox"
+            TextWrapping="Wrap" />
+        <ComboBox
+            x:Name="cmbCategory"
+            Width="120"
+            Margin="148,106,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" 
+            ItemsSource="{Binding Path=Categories}"
+            DisplayMemberPath="Name"
+            SelectedValuePath="Name"
+            SelectedValue="{Binding Path=Category}"/>
+        <RichTextBox x:Name="rtbDetails" Margin="148,171,384,171">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="Enter details here..." />
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Button
+            x:Name="btnSubmit"
+            Margin="186,307,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Submit" Click="btnSubmit_Click" />
+
+    </Grid>
+</Window>

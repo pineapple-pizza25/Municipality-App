@@ -1,0 +1,22 @@
+C:\Users\snmis\source\repos\Municipal App\Municipal App\bin\Debug\net8.0-windows\Municipal App.exe
+C:\Users\snmis\source\repos\Municipal App\Municipal App\bin\Debug\net8.0-windows\Municipal App.deps.json
+C:\Users\snmis\source\repos\Municipal App\Municipal App\bin\Debug\net8.0-windows\Municipal App.runtimeconfig.json
+C:\Users\snmis\source\repos\Municipal App\Municipal App\bin\Debug\net8.0-windows\Municipal App.dll
+C:\Users\snmis\source\repos\Municipal App\Municipal App\bin\Debug\net8.0-windows\Municipal App.pdb
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\ReportIssuesWindow.g.cs
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App_MarkupCompile.cache
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App_MarkupCompile.lref
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\ReportIssuesWindow.baml
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.g.resources
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.AssemblyInfoInputs.cache
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.AssemblyInfo.cs
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.csproj.CoreCompileInputs.cache
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.dll
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\refint\Municipal App.dll
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.pdb
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.genruntimeconfig.cache
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\ref\Municipal App.dll
