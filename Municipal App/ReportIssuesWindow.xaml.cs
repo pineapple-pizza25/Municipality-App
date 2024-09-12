@@ -29,6 +29,7 @@ namespace Municipal_App
 
         static BitmapImage selectedImage;
 
+
         public ReportIssuesWindow()
         {
             InitializeComponent();
@@ -47,6 +48,7 @@ namespace Municipal_App
 
             if (location == "" || category == "" || description == "")
             {
+                lblFeedback.Background = new SolidColorBrush(Colors.Black);
                 lblFeedback.Foreground = new SolidColorBrush(Colors.Red);
                 lblFeedback.Content = "Please enter all fields";
                 return;
@@ -61,6 +63,7 @@ namespace Municipal_App
                 issues.Add(new Issue(location, category, description, selectedImage));
             }
 
+            lblFeedback.Background = new SolidColorBrush(Colors.Black);
             lblFeedback.Foreground = new SolidColorBrush(Colors.Green);
             lblFeedback.Content = "Your issue was saved successfully";
         }
@@ -86,13 +89,11 @@ namespace Municipal_App
             }
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
+        private void btnBack_Click_1(object sender, RoutedEventArgs e)
         {
             MainWindow win = new MainWindow();
             win.Show();
-
         }
-        
     }
 
     //Title: Binding a WPF ComboBox to a custom list

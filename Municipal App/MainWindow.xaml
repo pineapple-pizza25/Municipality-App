@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Municipal_App"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
-        Background="#f0f4f8">
+        Title="MainWindow" Height="550" Width="800">
+
+    <Window.Background>
+        <ImageBrush ImageSource="Images\background.jpg" Stretch="UniformToFill" />
+    </Window.Background>
+
     <Grid>
         <Rectangle Fill="#2D9CDB" Height="120" VerticalAlignment="Top" Opacity="0.8" />
 
@@ -33,5 +37,12 @@
             Background="#2D9CDB" Foreground="White" FontSize="20" 
             FontWeight="Bold" BorderBrush="Transparent" 
             Padding="10" Opacity="0.8"  />
+
+        <Button x:Name="btnNotifications" Width="240" Height="60" 
+            Content="Your Notifications" 
+            Margin="280,393,280,0" VerticalAlignment="Top" 
+            Background="#2D9CDB" Foreground="White" FontSize="20" 
+            FontWeight="Bold" BorderBrush="Transparent" 
+            Padding="10" Opacity="0.8"  />  
     </Grid>
 </Window>
