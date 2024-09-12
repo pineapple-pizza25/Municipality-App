@@ -12,6 +12,7 @@
     </Window.Background>
 
     <Grid>
+        
         <Rectangle Fill="#2D9CDB" Height="100" VerticalAlignment="Top" Opacity="0.8" />
 
         <TextBlock Text="Notifications" Foreground="White" FontSize="50" FontWeight="Bold"

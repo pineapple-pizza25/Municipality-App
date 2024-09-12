@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
 using System.Drawing;
+using System.Windows.Forms;
 using Microsoft.Win32;
 using Color = System.Drawing.Color;
 //using Color = System.Windows.Media.Color;
@@ -66,6 +67,11 @@ namespace Municipal_App
             lblFeedback.Background = new SolidColorBrush(Colors.Black);
             lblFeedback.Foreground = new SolidColorBrush(Colors.Green);
             lblFeedback.Content = "Your issue was saved successfully";
+
+            var notifyIcon = new NotifyIcon();
+            //notifyIcon.Icon = new Icon("Icon.ico");
+            notifyIcon.Visible = true;
+            notifyIcon.ShowBalloonTip(5000, "Success", "Reported successfully", ToolTipIcon.Info);
         }
 
         private string ConvertRichTextBoxContentsToString(RichTextBox rtb)

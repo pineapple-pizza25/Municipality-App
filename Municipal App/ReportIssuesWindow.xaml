@@ -15,6 +15,7 @@
     </Window.Background>
 
     <Grid>
+        
         <Rectangle
             Height="87"
             VerticalAlignment="Top"
