@@ -5,12 +5,6 @@
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Configuration](#configuration)
-- [Screenshots](#screenshots)
-- [API Endpoints (if applicable)](#api-endpoints)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 
 ---
 
@@ -28,7 +22,7 @@ The application is still in the development phase and can only be used to report
 ## Installation
 ```bash
 # Clone the repository
-git clone https://github.com/pineapple-pizza25/Municipality-App
+git clone  https://github.com/VCDN-2024/prog7312-part-1-pineapple-pizza25 
 
 # Navigate to the project directory
 cd projectname
@@ -38,3 +32,17 @@ npm install
 
 # Start the application
 npm start
+```
+
+## Usage
+
+1. When the user opens the app they will see the main menu.
+1.1. Here they have the option to report an issue, view special events, view issue status or view notifications.
+1.2 The view special events and view issue status pages are currently not implemented.
+
+2. In the report issue page the user can enter the details for the issue before submitting.
+2.1. After submitting the user will get a success notification
+
+3. In the view notifications page the user can view a list of their notifications.
+3.1. They can click the clear button to remove their notifications.
+
