@@ -25,6 +25,14 @@ namespace Municipal_App
         {
             ReportIssuesWindow win = new ReportIssuesWindow();
             win.Show();
+            this.Hide();
+        }
+
+        private void btnNotifications_Click(object sender, RoutedEventArgs e)
+        {
+            NotificationsWindow win = new NotificationsWindow();
+            win.Show();
+            this.Hide();
         }
     }
 }

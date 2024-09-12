@@ -7,12 +7,18 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="NotificationsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ReportIssuesWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="NotificationsWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ReportIssuesWindow.xaml">
