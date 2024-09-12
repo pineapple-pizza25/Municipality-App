@@ -14,9 +14,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
 using System.Drawing;
-using System.Windows.Forms;
+using Notification.Wpf;
 using Microsoft.Win32;
 using Color = System.Drawing.Color;
+using Microsoft.Toolkit.Uwp.Notifications;
 //using Color = System.Windows.Media.Color;
 
 namespace Municipal_App
@@ -30,6 +31,8 @@ namespace Municipal_App
 
         static BitmapImage selectedImage;
 
+        private static readonly NotificationManager __NotificationManager = new();
+        //static Notifier() => Resources.Culture = Thread.CurrentThread.CurrentUICulture;
 
         public ReportIssuesWindow()
         {
@@ -37,8 +40,8 @@ namespace Municipal_App
 
             ConnectionViewModel vm = new ConnectionViewModel();
             DataContext = vm;
-            
-            
+
+            //_notificationManager = NotificationManager;
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
@@ -68,10 +71,7 @@ namespace Municipal_App
             lblFeedback.Foreground = new SolidColorBrush(Colors.Green);
             lblFeedback.Content = "Your issue was saved successfully";
 
-            var notifyIcon = new NotifyIcon();
-            //notifyIcon.Icon = new Icon("Icon.ico");
-            notifyIcon.Visible = true;
-            notifyIcon.ShowBalloonTip(5000, "Success", "Reported successfully", ToolTipIcon.Info);
+            ShowNotification(new NotificationManager());
         }
 
         private string ConvertRichTextBoxContentsToString(RichTextBox rtb)
@@ -99,6 +99,11 @@ namespace Municipal_App
         {
             MainWindow win = new MainWindow();
             win.Show();
+        }
+
+        public void ShowNotification(NotificationManager notificationManager)
+        {
+            notificationManager.Show("Title", "Your issue was saved successfully");
         }
     }
 

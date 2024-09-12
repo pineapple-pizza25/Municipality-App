@@ -40,7 +40,8 @@
             VerticalAlignment="Top"
             BorderBrush="#2D9CDB"
             BorderThickness="2"
-            FontSize="16" />
+            FontSize="16" 
+            ToolTip="Enter location"/>
 
         <ComboBox
             x:Name="cmbCategory"
@@ -57,7 +58,8 @@
             ItemsSource="{Binding Path=Categories}"
             SelectedValue="{Binding Path=Category}"
             SelectedValuePath="Name"
-            Text="Select a Category" />
+            Text="Select a Category" 
+            ToolTip="Select Category"/>
 
         <RichTextBox
             x:Name="rtbDetails"
@@ -67,7 +69,8 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             BorderBrush="#2D9CDB"
-            BorderThickness="2">
+            BorderThickness="2"
+            ToolTip="Enter location">
             <FlowDocument>
                 <Paragraph>
                     <Run Text="Enter details here..." />

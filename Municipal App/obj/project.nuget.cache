@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "mW1YW9DA8+E=",
+  "dgSpecHash": "SeQ/8nKsVtM=",
   "success": true,
   "projectFilePath": "C:\\Users\\snmis\\source\\repos\\Municipal App\\Municipal App\\Municipal App.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\snmis\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\snmis\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\snmis\\.nuget\\packages\\microsoft.toolkit.uwp.notifications\\7.1.3\\microsoft.toolkit.uwp.notifications.7.1.3.nupkg.sha512",
+    "C:\\Users\\snmis\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512",
+    "C:\\Users\\snmis\\.nuget\\packages\\notification.wpf\\8.0.0\\notification.wpf.8.0.0.nupkg.sha512",
+    "C:\\Users\\snmis\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }
