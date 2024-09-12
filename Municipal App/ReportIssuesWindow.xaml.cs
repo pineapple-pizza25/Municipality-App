@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
 using System.Drawing;
+using System.Threading;
 using Notification.Wpf;
 using Microsoft.Win32;
 using Color = System.Drawing.Color;
@@ -29,10 +30,12 @@ namespace Municipal_App
     {
         public static List<Issue> issues = new List<Issue>();
 
+        //List used for notifictions
+        public static List<Issue> notifications = new List<Issue>();
+
         static BitmapImage selectedImage;
 
         private static readonly NotificationManager __NotificationManager = new();
-        //static Notifier() => Resources.Culture = Thread.CurrentThread.CurrentUICulture;
 
         public ReportIssuesWindow()
         {
@@ -41,11 +44,11 @@ namespace Municipal_App
             ConnectionViewModel vm = new ConnectionViewModel();
             DataContext = vm;
 
-            //_notificationManager = NotificationManager;
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
+
             string location = txtLocation.Text;
             string category = cmbCategory.Text;
             string description = ConvertRichTextBoxContentsToString(rtbDetails);
@@ -61,25 +64,36 @@ namespace Municipal_App
             if (selectedImage == null)
             {
                 issues.Add(new Issue(location, category, description));
+                notifications.Add(new Issue(location, category, description));
             }
             else
             {
                 issues.Add(new Issue(location, category, description, selectedImage));
+                notifications.Add(new Issue(location, category, description, selectedImage));
             }
+
+            ShowProgressbar(new NotificationManager());
 
             lblFeedback.Background = new SolidColorBrush(Colors.Black);
             lblFeedback.Foreground = new SolidColorBrush(Colors.Green);
             lblFeedback.Content = "Your issue was saved successfully";
 
             ShowNotification(new NotificationManager());
+            ClearComponents();
         }
 
+        /*
+         * Converts the contents of a richTextBox to a string
+         */
         private string ConvertRichTextBoxContentsToString(RichTextBox rtb)
         {
             TextRange textRange = new TextRange(rtb.Document.ContentStart, rtb.Document.ContentEnd);
             return textRange.Text;
         }
 
+        /*
+         * Select an Image from your files
+         */
         private void btnImage_Click(object sender, RoutedEventArgs e)
         {
             //Title: display image into picturebox in c# windows application 4.6
@@ -99,11 +113,52 @@ namespace Municipal_App
         {
             MainWindow win = new MainWindow();
             win.Show();
+            this.Hide();
         }
 
+
+        /*
+         * Used to show the user a popup notification 
+         * on their desktop
+         * 
+         * Title: Notifications.wpf/Documentation.md
+         * Author: Platonenkov
+         * Year published: 2022
+         * Availability: https://github.com/Platonenkov/Notification.Wpf/blob/dev/Documentation.md#-notifications
+         */
         public void ShowNotification(NotificationManager notificationManager)
         {
-            notificationManager.Show("Title", "Your issue was saved successfully");
+            string Category = cmbCategory.Text;
+            notificationManager.Show("Issue Reported", $"Your issue regarding {Category} was saved successfully", NotificationType.Success);
+        }
+
+        /*
+         * Used to show the user a progress bar
+         * 
+         * Title: Notifications.wpf/Documentation.md
+         * Author: Platonenkov
+         * Year published: 2022
+         * Availability: https://github.com/Platonenkov/Notification.Wpf/blob/dev/Documentation.md#-notifications
+         */
+        private async void ShowProgressbar(NotificationManager notificationManager)
+        {
+            using var progress = notificationManager.ShowProgressBar();
+            for (var i = 0; i <= 100; i++)
+            {
+                progress.Cancel.ThrowIfCancellationRequested();
+                progress.Report((i, $"Progress {i}", "With progress", true));
+                await Task.Delay(TimeSpan.FromSeconds(0.02), progress.Cancel).ConfigureAwait(false);
+            }
+        }
+
+        /*
+         * Clears components
+         */
+        public void ClearComponents()
+        {
+            txtLocation.Clear();
+            cmbCategory.Text = "";
+            rtbDetails.Document.Blocks.Clear();
         }
     }
 

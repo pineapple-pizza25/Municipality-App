@@ -25,7 +25,7 @@ namespace Municipal_App
         {
             InitializeComponent();
 
-            foreach (Issue issue in ReportIssuesWindow.issues)
+            foreach (Issue issue in ReportIssuesWindow.notifications)
             {
                 TextBlock textBlock = new TextBlock()
                 {
@@ -57,6 +57,13 @@ namespace Municipal_App
             MainWindow win = new MainWindow();
             win.Show();
             this.Hide();
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            spNotifications.Children.Clear();
+
+            ReportIssuesWindow.notifications.Clear();
         }
     }
 }

@@ -38,6 +38,20 @@
             Foreground="White"
             Opacity="0.8" Click="btnBack_Click_1" RenderTransformOrigin="0.575,1.814" />
 
+        <Button
+            x:Name="btnClear"
+            Width="100"
+            Height="40"
+            Margin="662,360,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Background="#2D9CDB"
+            BorderBrush="Transparent"
+            Content="Clear"
+            FontSize="16"
+            FontWeight="Bold"
+            Foreground="White"
+            Opacity="0.8"  RenderTransformOrigin="0.575,1.814" Click="btnClear_Click" />
 
     </Grid>
 </Window>
