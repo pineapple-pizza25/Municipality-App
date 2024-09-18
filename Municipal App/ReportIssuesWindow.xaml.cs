@@ -58,6 +58,8 @@ namespace Municipal_App
                 lblFeedback.Background = new SolidColorBrush(Colors.Black);
                 lblFeedback.Foreground = new SolidColorBrush(Colors.Red);
                 lblFeedback.Content = "Please enter all fields";
+
+                ShowFailureNotification(new NotificationManager());
                 return;
             }
 
@@ -78,7 +80,7 @@ namespace Municipal_App
             lblFeedback.Foreground = new SolidColorBrush(Colors.Green);
             lblFeedback.Content = "Your issue was saved successfully";
 
-            ShowNotification(new NotificationManager());
+            ShowSuccessNotification(new NotificationManager());
             ClearComponents();
         }
 
@@ -126,11 +128,18 @@ namespace Municipal_App
          * Year published: 2022
          * Availability: https://github.com/Platonenkov/Notification.Wpf/blob/dev/Documentation.md#-notifications
          */
-        public void ShowNotification(NotificationManager notificationManager)
+        public void ShowSuccessNotification(NotificationManager notificationManager)
         {
             string Category = cmbCategory.Text;
             notificationManager.Show("Issue Reported", $"Your issue regarding {Category} was saved successfully", NotificationType.Success);
         }
+        public void ShowFailureNotification(NotificationManager notificationManager)
+        {
+            string Category = cmbCategory.Text;
+            notificationManager.Show("Fields Empty", $"Please enter all fields", NotificationType.Error);
+        }
+
+
 
         /*
          * Used to show the user a progress bar

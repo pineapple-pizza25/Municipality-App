@@ -1,49 +1,136 @@
-﻿<Window x:Class="Municipal_App.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Municipal_App"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="800">
+﻿<Window
+    x:Class="Municipal_App.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Municipal_App"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="550"
+    AllowsTransparency="False"
+    ResizeMode="CanResize"
+    mc:Ignorable="d">
 
     <Window.Background>
         <ImageBrush ImageSource="Images\background.jpg" Stretch="UniformToFill" />
     </Window.Background>
 
-    <Grid>
-        
-        <Rectangle Fill="#2D9CDB" Height="120" VerticalAlignment="Top" Opacity="0.8" />
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
 
-        <TextBlock Text="Municipal App" Foreground="White" FontSize="50" FontWeight="Bold"
-                   HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0"/>
+        <Grid>
 
-        <Button x:Name="btnReport" Width="240" Height="60" 
-                Click="btnReport_Click" Content="Report an Issue" 
-                Margin="280,130,280,0" VerticalAlignment="Top" 
-                Background="#2D9CDB" Foreground="White" FontSize="20" 
-                FontWeight="Bold" BorderBrush="Transparent" 
-                Padding="10" Opacity="0.8"/>
+            <Rectangle
+                Height="120"
+                VerticalAlignment="Top"
+                Fill="#2D9CDB"
+                Opacity="0.8" />
 
-        <Button x:Name="btnEvents" Width="240" Height="60" 
-            Content="Local Events" 
-            Margin="280,217,280,0" VerticalAlignment="Top" 
-            Background="#2D9CDB" Foreground="White" FontSize="20" 
-            FontWeight="Bold" BorderBrush="Transparent" 
-            Padding="10" Opacity="0.8"  />
+            <TextBlock
+                Margin="0,20,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                FontFamily="{StaticResource InterVariable}"
+                FontSize="50"
+                FontWeight="Bold"
+                Foreground="White"
+                Text="Municipal App" />
 
-        <Button x:Name="btnStatus" Width="240" Height="60" 
-            Content="Service Request Status" 
-            Margin="280,303,280,0" VerticalAlignment="Top" 
-            Background="#2D9CDB" Foreground="White" FontSize="20" 
-            FontWeight="Bold" BorderBrush="Transparent" 
-            Padding="10" Opacity="0.8"  />
+            <Button
+                x:Name="btnReport"
+                Width="240"
+                Height="60"
+                Margin="280,130,280,0"
+                Padding="10"
+                VerticalAlignment="Top"
+                Background="#2D9CDB"
+                BorderBrush="Transparent"
+                Click="btnReport_Click"
+                Content="Report an Issue"
+                FontFamily="{StaticResource InterVariable}"
+                FontSize="20"
+                FontWeight="Bold"
+                Foreground="White"
+                Opacity="0.8">
 
-        <Button x:Name="btnNotifications" Width="240" Height="60" 
-            Content="Your Notifications" 
-            Margin="280,393,280,0" VerticalAlignment="Top" 
-            Background="#2D9CDB" Foreground="White" FontSize="20" 
-            FontWeight="Bold" BorderBrush="Transparent" 
-            Padding="10" Opacity="0.8" Click="btnNotifications_Click"  />  
-    </Grid>
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20" />
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Button
+                x:Name="btnEvents"
+                Width="240"
+                Height="60"
+                Margin="280,217,280,0"
+                Padding="10"
+                VerticalAlignment="Top"
+                Background="#2D9CDB"
+                BorderBrush="Transparent"
+                Click="btnEvents_Click"
+                Content="Local Events"
+                FontFamily="{StaticResource InterVariable}"
+                FontSize="20"
+                FontWeight="Bold"
+                Foreground="White"
+                Opacity="0.8">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20" />
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Button
+                x:Name="btnStatus"
+                Width="240"
+                Height="60"
+                Margin="280,303,280,0"
+                Padding="10"
+                VerticalAlignment="Top"
+                Background="#2D9CDB"
+                BorderBrush="Transparent"
+                Click="btnStatus_Click"
+                Content="Service Request Status"
+                FontFamily="{StaticResource InterVariable}"
+                FontSize="20"
+                FontWeight="Bold"
+                Foreground="White"
+                Opacity="0.8">
+
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20" />
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Button
+                x:Name="btnNotifications"
+                Width="240"
+                Height="60"
+                Margin="280,393,280,0"
+                Padding="10"
+                VerticalAlignment="Top"
+                Background="#2D9CDB"
+                BorderBrush="Transparent"
+                Click="btnNotifications_Click"
+                Content="Your Notifications"
+                FontFamily="{StaticResource InterVariable}"
+                FontSize="20"
+                FontWeight="Bold"
+                Foreground="White"
+                Opacity="0.8">
+
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20" />
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+        </Grid>
+    </ScrollViewer>
 </Window>

@@ -8,6 +8,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Toolkit.Uwp.Notifications;
+using Notification.Wpf;
 
 namespace Municipal_App
 {
@@ -16,6 +18,8 @@ namespace Municipal_App
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static readonly NotificationManager __NotificationManager = new();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -33,6 +37,24 @@ namespace Municipal_App
             NotificationsWindow win = new NotificationsWindow();
             win.Show();
             this.Hide();
+        }
+
+        private void btnEvents_Click(object sender, RoutedEventArgs e)
+        {
+            ShowFailureNotification(new NotificationManager());
+        }
+
+
+        private void btnStatus_Click(object sender, RoutedEventArgs e)
+        {
+            ShowFailureNotification(new NotificationManager());
+        }
+
+
+
+        public void ShowFailureNotification(NotificationManager notificationManager)
+        {
+            notificationManager.Show("Under Construction", $"This feature has not been implemented yet", NotificationType.Information);
         }
     }
 }
