@@ -19,6 +19,7 @@ namespace Municipal_App.Windows
     {
 
         Dictionary<string, Event> Events = new();
+        Stack<Event> EventStack = new();
 
         public LocalEvents()
         {
@@ -49,21 +50,21 @@ namespace Municipal_App.Windows
 
         private void LoadEvents()
         {
+            InitialisStack();
 
-            //TODO: USe stacks or queses to display
-            foreach (var localEvent in Events)
+            for (int i = 0; i < 3; i++)
             {
+                Event localEvent = EventStack.Pop();
+
                 TextBlock textBlock = new TextBlock()
                 {
-                    Text = $"Join us for {localEvent.Value.Name} on {localEvent.Key:MMMM dd, yyyy}\n" +
-                    $"At {localEvent.Value.Location}",
+                    Text = $"Join us for {localEvent.Name} on {localEvent.EventDate:MMMM dd, yyyy}\n" +
+                    $"At {localEvent.Location}",
                     Foreground = Brushes.Black,
                     FontSize = 14,
                     HorizontalAlignment = HorizontalAlignment.Center,
                     VerticalAlignment = VerticalAlignment.Center
                 };
-
-                Image image = new Image();
 
                 Border border = new Border
                 {
@@ -81,9 +82,17 @@ namespace Municipal_App.Windows
 
         }
 
-        private void Search()
+        private void InitialisStack()
         {
-            //TODO
+            foreach (var item in Events.Values)
+            {
+                EventStack.Push(item);
+            }
+        }
+
+        private IEnumerable<Event> Search(string searchValue)
+        {
+            return Events.Values.Where(e => e.Name.Contains(searchValue, StringComparison.OrdinalIgnoreCase));
         }
 
         private void GetRecommeneded()

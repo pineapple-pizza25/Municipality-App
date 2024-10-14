@@ -6,3 +6,30 @@ C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App_MarkupCompile.cache
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App_MarkupCompile.lref
+C:\Users\snmis\source\repos\Municipal App\Municipal App\bin\Debug\net8.0-windows\Municipal App.exe
+C:\Users\snmis\source\repos\Municipal App\Municipal App\bin\Debug\net8.0-windows\Municipal App.deps.json
+C:\Users\snmis\source\repos\Municipal App\Municipal App\bin\Debug\net8.0-windows\Municipal App.runtimeconfig.json
+C:\Users\snmis\source\repos\Municipal App\Municipal App\bin\Debug\net8.0-windows\Municipal App.dll
+C:\Users\snmis\source\repos\Municipal App\Municipal App\bin\Debug\net8.0-windows\Municipal App.pdb
+C:\Users\snmis\source\repos\Municipal App\Municipal App\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\snmis\source\repos\Municipal App\Municipal App\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\snmis\source\repos\Municipal App\Municipal App\bin\Debug\net8.0-windows\Microsoft.Toolkit.Uwp.Notifications.dll
+C:\Users\snmis\source\repos\Municipal App\Municipal App\bin\Debug\net8.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Users\snmis\source\repos\Municipal App\Municipal App\bin\Debug\net8.0-windows\Notification.Wpf.dll
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\App.baml
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\LocalEvents.baml
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\MainWindow.baml
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\NotificationsWindow.baml
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\ReportIssuesWindow.baml
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.g.resources
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.AssemblyInfoInputs.cache
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.AssemblyInfo.cs
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.csproj.CoreCompileInputs.cache
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.sourcelink.json
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipa.E4A06FD9.Up2Date
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.dll
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\refint\Municipal App.dll
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.pdb
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.genruntimeconfig.cache
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\ref\Municipal App.dll
