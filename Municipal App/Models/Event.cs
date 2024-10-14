@@ -12,12 +12,16 @@ namespace Municipal_App.Models
     {
         public string Name { get; set; }
         public string Location { get; set; }
+        public DateOnly EventDate { get; set; }
+        public TimeOnly EventTime { get; set; }
         public BitmapImage? Image { get; set; }
 
-        public Event(string name, string location)
+        public Event(string name, string location, DateOnly eventDate, TimeOnly eventTime)
         {
             Name = name;
             Location = location;
+            EventDate = eventDate;
+            EventTime = eventTime;
         }
 
         public Event(string name, string location, BitmapImage image)
