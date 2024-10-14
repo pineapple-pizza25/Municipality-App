@@ -10,11 +10,11 @@
 ---
 
 ## About the Project
-This project was built as an application for members of a municipality to report issues and complaints aswell as view local events.
-The application is still in the development phase and can only be used to report issues.
+The payment gateway is intended to be as secure as possible thanks to uses of cyber security techniques
 
 ### Built With
-- [Framework 1](https://dotnet.microsoft.com/en-us/apps/aspnet)
+- [Node.js](https://nodejs.org/docs/latest/api/)
+- [React](https://react.dev/)
 
 ## Features
 - Report issues to your local municipality.
@@ -25,13 +25,20 @@ The application is still in the development phase and can only be used to report
 # Clone the repository
 git clone  https://github.com/VCDN-2024/prog7312-part-1-pineapple-pizza25 
 
-# Navigate to the project directory
-cd projectname
-
-# Install dependencies
+# Install backend dependancies
+cd Backend
 npm install
 
-# Start the application
+# Install front end dependancies
+cd ../frontend
+npm install
+
+# Start the backend application
+cd ../Backend
+npm run dev
+
+# Start the frontend application
+cd ../frontend
 npm start
 ```
 

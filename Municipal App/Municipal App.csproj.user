@@ -7,21 +7,27 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="NotificationsWindow.xaml.cs">
+    <Compile Update="Windows\LocalEvents.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ReportIssuesWindow.xaml.cs">
+    <Compile Update="Windows\NotificationsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\ReportIssuesWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainWindow.xaml">
+    <Page Update="Windows\LocalEvents.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="NotificationsWindow.xaml">
+    <Page Update="Windows\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ReportIssuesWindow.xaml">
+    <Page Update="Windows\NotificationsWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\ReportIssuesWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
