@@ -26,6 +26,8 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\background.jpg" />
+    <Resource Include="Images\announcement.jpg" />
+    <Resource Include="Images\events.jpg" />
   </ItemGroup>
 
   <ItemGroup>

@@ -15,7 +15,7 @@ namespace Municipal_App.Models
         public DateOnly EventDate { get; set; }
         public TimeOnly EventTime { get; set; }
         public string Category { get; set; }
-        public BitmapImage? Image { get; set; }
+        public string? Image { get; set; }
 
         public Event(string name, string location, DateOnly eventDate, TimeOnly eventTime, string category)
         {
@@ -25,13 +25,17 @@ namespace Municipal_App.Models
             EventTime = eventTime;
             Category = category;
         }
-
-        public Event(string name, string location, BitmapImage image)
+        public Event(string name, string location, DateOnly eventDate, TimeOnly eventTime, string category, string image)
         {
             Name = name;
             Location = location;
+            EventDate = eventDate;
+            EventTime = eventTime;
+            Category = category;
             Image = image;
         }
+
+       
 
         
     }

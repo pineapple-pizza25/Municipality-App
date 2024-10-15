@@ -50,6 +50,10 @@ namespace Municipal_App.Windows
             Events.Add("2025-12-14_Rugby_Match", new Event("Rugby Match", "Kingsmead Stadium", new DateOnly(2025, 12, 14), new TimeOnly(17, 0), "Sports"));
             Events.Add("2025-12-25_Christmas_Party", new Event("Christmas Party", "Blue Lagoon", new DateOnly(2025, 12, 25), new TimeOnly(14, 0), "Holiday"));
             Events.Add("2025-12-31_New_Years_Celebration", new Event("New Years Celebration", "North Beach", new DateOnly(2025, 12, 31), new TimeOnly(20, 0), "Holiday"));
+            Events.Add("2024-11-05_Town_Hall_Meeting", new Event("Town Hall Meeting", "Community Center", new DateOnly(2024, 11, 05), new TimeOnly(18, 0), "Announcement"));
+            Events.Add("2024-11-15_Volunteer_Registration", new Event("Volunteer Registration", "City Hall", new DateOnly(2024, 11, 15), new TimeOnly(10, 0), "Announcement"));
+            Events.Add("2024-12-10_City_Council_Elections", new Event("City Council Elections", "City Hall", new DateOnly(2024, 12, 10), new TimeOnly(8, 0), "Announcement"));
+            Events.Add("2024-12-20_New_Year_Prep", new Event("New Year Preparation Meeting", "Town Square", new DateOnly(2024, 12, 20), new TimeOnly(17, 0), "Announcement"));
 
             InitialiseCategoriesHash();
         }
@@ -80,8 +84,8 @@ namespace Municipal_App.Windows
                 Label eventLabel = new Label()
                 {
 
-                    Content = $"Join us for {localEvent.Name} on {localEvent.EventDate:MMMM dd, yyyy}\n" +
-                         $"At {localEvent.Location}",
+                    Content = $"{localEvent.Category}\n" +
+                    $"{localEvent.Name}",
                     Foreground = Brushes.Black,
                     FontSize = 14,
                     HorizontalAlignment = HorizontalAlignment.Center,
@@ -166,9 +170,9 @@ namespace Municipal_App.Windows
             {
                 Label eventLabel = new Label()
                 {
-                    
-                        Content = $"Join us for {localEvent.Name} on {localEvent.EventDate:MMMM dd, yyyy}\n" +
-                        $"At {localEvent.Location}",
+
+                        Content = $"{localEvent.Category}\n" +
+                        $"{localEvent.Name}",
                         Foreground = Brushes.Black,
                         FontSize = 14,
                         HorizontalAlignment = HorizontalAlignment.Center,
@@ -212,7 +216,15 @@ namespace Municipal_App.Windows
             BitmapImage myBitmapImage = new BitmapImage();
 
             myBitmapImage.BeginInit();
-            myBitmapImage.UriSource = new Uri("pack://application:,,,/Images/background.jpg");
+
+            if (localEvent.Category == "Announcement")
+            {
+                myBitmapImage.UriSource = new Uri("pack://application:,,,/Images/announcement.jpg", UriKind.Absolute);
+            }
+            else
+            {
+                myBitmapImage.UriSource = new Uri("pack://application:,,,/Images/events.jpg", UriKind.RelativeOrAbsolute); 
+            }
 
             myBitmapImage.DecodePixelWidth = 200;
             myBitmapImage.EndInit();
