@@ -46,10 +46,36 @@
                 Content="Search" 
                 Margin="288,145,412,359" 
                 Click="btnSearch_Click"
-                RenderTransformOrigin="0.5,0.5" />
+                RenderTransformOrigin="0.5,0.5" 
+                FontFamily="{StaticResource InterVariable}"
+                FontSize="16"/>
+            <Button
+                x:Name="btnFilterCategory"
+                Width="120"
+                Height="28"
+                Margin="95,183,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Filter Category:"
+                FontFamily="{StaticResource InterVariable}"
+                FontSize="16" Click="btnFilterCategory_Click"  />
+            <ComboBox
+                 x:Name="cmbCategory"
+                 Width="143"
+                 Margin="232,180,0,0"
+                 Padding="8"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Background="White"
+                 BorderBrush="#2D9CDB"
+                 BorderThickness="2"
+                 FontFamily="{StaticResource InterVariable}"
+                 FontSize="16"
+                 Text="Select a Category"
+                 ToolTip="Select Category" />
             <StackPanel
                 x:Name="spEvents"
-                Margin="88,180,425,55"
+                Margin="88,220,425,55"
                 Background="White"
                 Opacity="0.8"
                 RenderTransformOrigin="0.5,0.5" />
@@ -69,7 +95,7 @@
                 FontWeight="Bold"
                 Foreground="White"
                 Opacity="0.8"
-                RenderTransformOrigin="0.5,0.5" Click="btnClear_Click"/>   
+                RenderTransformOrigin="0.5,0.5" Click="btnClear_Click"/>
             <Button
                 x:Name="btnBack"
                 Width="100"

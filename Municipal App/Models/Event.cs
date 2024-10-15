@@ -14,14 +14,16 @@ namespace Municipal_App.Models
         public string Location { get; set; }
         public DateOnly EventDate { get; set; }
         public TimeOnly EventTime { get; set; }
+        public string Category { get; set; }
         public BitmapImage? Image { get; set; }
 
-        public Event(string name, string location, DateOnly eventDate, TimeOnly eventTime)
+        public Event(string name, string location, DateOnly eventDate, TimeOnly eventTime, string category)
         {
             Name = name;
             Location = location;
             EventDate = eventDate;
             EventTime = eventTime;
+            Category = category;
         }
 
         public Event(string name, string location, BitmapImage image)
