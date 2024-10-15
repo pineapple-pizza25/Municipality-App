@@ -25,21 +25,15 @@ The payment gateway is intended to be as secure as possible thanks to uses of cy
 # Clone the repository
 git clone  https://github.com/VCDN-2024/prog7312-part-1-pineapple-pizza25 
 
-# Install backend dependancies
-cd Backend
+# Navigate to the project directory
+cd projectname
+
+# Install dependencies
 npm install
 
-# Install front end dependancies
-cd ../frontend
-npm install
-
-# Start the backend application
-cd ../Backend
-npm run dev
-
-# Start the frontend application
-cd ../frontend
+# Start the application
 npm start
+
 ```
 
 ## Usage
