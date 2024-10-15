@@ -28,4 +28,8 @@
     <Resource Include="Images\background.jpg" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="EventImages\" />
+  </ItemGroup>
+
 </Project>

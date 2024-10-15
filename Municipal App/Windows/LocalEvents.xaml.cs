@@ -77,19 +77,29 @@ namespace Municipal_App.Windows
             {
                 Event localEvent = EventStack.Dequeue();
 
-                TextBlock textBlock = new TextBlock()
+                Label eventLabel = new Label()
                 {
-                    Text = $"Join us for {localEvent.Name} on {localEvent.EventDate:MMMM dd, yyyy}\n" +
-                    $"At {localEvent.Location}",
+
+                    Content = $"Join us for {localEvent.Name} on {localEvent.EventDate:MMMM dd, yyyy}\n" +
+                         $"At {localEvent.Location}",
                     Foreground = Brushes.Black,
                     FontSize = 14,
                     HorizontalAlignment = HorizontalAlignment.Center,
-                    VerticalAlignment = VerticalAlignment.Center
+                    VerticalAlignment = VerticalAlignment.Center,
+
+
                 };
+
+                eventLabel.MouseLeftButtonDown += (sender, e) =>
+                {
+                    Console.WriteLine($"Button clicked for event: {localEvent.Name}");
+                    PopulateDetailsStackPanel(localEvent);
+                };
+
 
                 Border border = new Border
                 {
-                    Child = textBlock,
+                    Child = eventLabel,
                     BorderBrush = Brushes.Black,
                     BorderThickness = new Thickness(2),
                     Background = Brushes.LightCyan,
@@ -154,19 +164,29 @@ namespace Municipal_App.Windows
 
             foreach (Event localEvent in eventHash)
             {
-                TextBlock textBlock = new TextBlock()
+                Label eventLabel = new Label()
                 {
-                    Text = $"Join us for {localEvent.Name} on {localEvent.EventDate:MMMM dd, yyyy}\n" +
-                    $"At {localEvent.Location}",
-                    Foreground = Brushes.Black,
-                    FontSize = 14,
-                    HorizontalAlignment = HorizontalAlignment.Center,
-                    VerticalAlignment = VerticalAlignment.Center
+                    
+                        Content = $"Join us for {localEvent.Name} on {localEvent.EventDate:MMMM dd, yyyy}\n" +
+                        $"At {localEvent.Location}",
+                        Foreground = Brushes.Black,
+                        FontSize = 14,
+                        HorizontalAlignment = HorizontalAlignment.Center,
+                        VerticalAlignment = VerticalAlignment.Center,
+
+                    
                 };
+
+                eventLabel.MouseLeftButtonDown += (sender, e) =>
+                {
+                    Console.WriteLine($"Button clicked for event: {localEvent.Name}");
+                    PopulateDetailsStackPanel(localEvent);
+                };
+
 
                 Border border = new Border
                 {
-                    Child = textBlock,
+                    Child = eventLabel,
                     BorderBrush = Brushes.Black,
                     BorderThickness = new Thickness(2),
                     Background = Brushes.LightCyan,
@@ -177,6 +197,46 @@ namespace Municipal_App.Windows
 
                 spEvents.Children.Add(border);
             }
+        }
+
+
+        //https://learn.microsoft.com/en-us/dotnet/desktop/wpf/controls/how-to-use-the-image-element?view=netframeworkdesktop-4.8
+        public void PopulateDetailsStackPanel(Event localEvent)
+        {
+            spEventDetails.Children.Clear();
+
+            Image myImage = new Image();
+            myImage.Height = 200;
+            myImage.Width = 200;
+
+            BitmapImage myBitmapImage = new BitmapImage();
+
+            myBitmapImage.BeginInit();
+            myBitmapImage.UriSource = new Uri("pack://application:,,,/Images/background.jpg");
+
+            myBitmapImage.DecodePixelWidth = 200;
+            myBitmapImage.EndInit();
+            myImage.Source = myBitmapImage;
+
+            TextBlock eventName = new()
+            {
+                Text = $" {localEvent.Name} ",
+                FontSize = 20,
+                Foreground = Brushes.Black,
+                HorizontalAlignment = HorizontalAlignment.Center
+            };
+            TextBlock eventDetails = new()
+            {
+                Text = $"Date: {localEvent.EventDate} \nTime: {localEvent.EventTime}"+
+                $"\nLocation: {localEvent.Location}" ,
+                FontSize = 16,
+                Foreground = Brushes.Black,
+                HorizontalAlignment = HorizontalAlignment.Center
+            };
+
+            spEventDetails.Children.Add(myImage);
+            spEventDetails.Children.Add(eventName);
+            spEventDetails.Children.Add(eventDetails);
         }
 
         private void btnClear_Click(object sender, RoutedEventArgs e)

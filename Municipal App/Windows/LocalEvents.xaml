@@ -8,111 +8,81 @@
     Title="LocalEvents"
     Width="800"
     Height="550"
+    MinWidth="800"
+    MinHeight="550"
     AllowsTransparency="False"
     ResizeMode="CanResize"
-    mc:Ignorable="d"
-    RenderTransformOrigin="0.5,0.5">
+    mc:Ignorable="d">
     <Window.Background>
         <ImageBrush ImageSource="..\Images\background.jpg" Stretch="UniformToFill" />
     </Window.Background>
-    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-        <Grid RenderTransformOrigin="0.5,0.5">
-            <Rectangle
-                Height="120"
-                VerticalAlignment="Top"
-                Fill="#2D9CDB"
-                Opacity="0.8"
-                RenderTransformOrigin="0.5,0.5" />
-            <TextBlock
-                Margin="0,20,0,0"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Top"
-                FontFamily="{StaticResource InterVariable}"
-                FontSize="50"
-                FontWeight="Bold"
-                Foreground="White"
-                Text="Local Events"
-                RenderTransformOrigin="0.5,0.5" />
-            <TextBox
-                x:Name="txtSearch"
-                Width="200"
-                Height="30" 
-                Margin="88,145,512,359"
-                RenderTransformOrigin="0.5,0.5"/>
-            <Button
-                x:Name="btnSearch"
-                Width="75"
-                Height="28"
-                Content="Search" 
-                Margin="288,145,412,359" 
-                Click="btnSearch_Click"
-                RenderTransformOrigin="0.5,0.5" 
-                FontFamily="{StaticResource InterVariable}"
-                FontSize="16"/>
-            <Button
-                x:Name="btnFilterCategory"
-                Width="120"
-                Height="28"
-                Margin="95,183,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Filter Category:"
-                FontFamily="{StaticResource InterVariable}"
-                FontSize="16" Click="btnFilterCategory_Click"  />
-            <ComboBox
-                 x:Name="cmbCategory"
-                 Width="143"
-                 Margin="232,180,0,0"
-                 Padding="8"
-                 HorizontalAlignment="Left"
-                 VerticalAlignment="Top"
-                 Background="White"
-                 BorderBrush="#2D9CDB"
-                 BorderThickness="2"
-                 FontFamily="{StaticResource InterVariable}"
-                 FontSize="16"
-                 Text="Select a Category"
-                 ToolTip="Select Category" />
-            <StackPanel
-                x:Name="spEvents"
-                Margin="88,220,425,55"
-                Background="White"
-                Opacity="0.8"
-                RenderTransformOrigin="0.5,0.5" />
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
 
-            <Button
-                x:Name="btnClear"
-                Width="100"
-                Height="40"
-                Margin="150,484,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Background="#2D9CDB"
-                BorderBrush="Transparent"
-                Content="Clear"
-                FontFamily="{StaticResource InterVariable}"
-                FontSize="16"
-                FontWeight="Bold"
-                Foreground="White"
-                Opacity="0.8"
-                RenderTransformOrigin="0.5,0.5" Click="btnClear_Click"/>
-            <Button
-                x:Name="btnBack"
-                Width="100"
-                Height="40"
-                Margin="10,484,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Background="#2D9CDB"
-                BorderBrush="Transparent"
-                Click="btnBack_Click_1"
-                Content="Back"
-                FontFamily="{StaticResource InterVariable}"
-                FontSize="16"
-                FontWeight="Bold"
-                Foreground="White"
-                Opacity="0.8"
-                RenderTransformOrigin="0.5,0.5" />
-        </Grid>
-    </ScrollViewer>
+        <!-- Header (spans both columns) -->
+        <Rectangle Grid.ColumnSpan="2" Fill="#2D9CDB" Opacity="0.8"/>
+        <TextBlock Text="Local Events" 
+               FontFamily="{StaticResource InterVariable}"
+               FontSize="50" FontWeight="Bold" Foreground="White"
+               HorizontalAlignment="Center" VerticalAlignment="Center"
+               Grid.ColumnSpan="2"/>
+
+        <!-- Search and Filter (spans both columns) -->
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" Margin="10">
+            <TextBox x:Name="txtSearch" Width="195" Height="30" Margin="0,0,10,0"/>
+            <Button x:Name="btnSearch" Content="Search" Click="btnSearch_Click"
+                FontFamily="{StaticResource InterVariable}" FontSize="16" Padding="10,5"/>
+            <Button x:Name="btnFilterCategory" Content="Filter Category:" 
+                FontFamily="{StaticResource InterVariable}" FontSize="16" 
+                Click="btnFilterCategory_Click" Margin="10,0"/>
+            <ComboBox x:Name="cmbCategory" Width="143" Padding="8"
+                  Background="White" BorderBrush="#2D9CDB" BorderThickness="2"
+                  FontFamily="{StaticResource InterVariable}" FontSize="16"
+                  Text="Select a Category" ToolTip="Select Category"/>
+        </StackPanel>
+
+        <!-- Event List -->
+        <ScrollViewer Grid.Row="2" Grid.Column="0" Margin="10">
+            <StackPanel x:Name="spEvents" Background="White" Opacity="0.8"/>
+        </ScrollViewer>
+
+        <!-- Event Details -->
+        <ScrollViewer Grid.Row="2" Grid.Column="1" Margin="10">
+            <StackPanel x:Name="spEventDetails" Background="White" Opacity="0.8"/>
+        </ScrollViewer>
+
+        <!-- Buttons (spans both columns) -->
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" 
+                HorizontalAlignment="Center" Margin="0,10">
+            <Button x:Name="btnBack" Content="Back" Click="btnBack_Click_1"
+                Background="#2D9CDB" BorderBrush="Transparent" Foreground="White"
+                FontFamily="{StaticResource InterVariable}" FontSize="16" FontWeight="Bold"
+                Width="88" Height="40" Margin="0,0,10,0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20" />
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btnClear" Content="Clear" Click="btnClear_Click"
+                Background="#2D9CDB" BorderBrush="Transparent" Foreground="White"
+                FontFamily="{StaticResource InterVariable}" FontSize="16" FontWeight="Bold"
+                Width="102" Height="40">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20" />
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+    </Grid>
 </Window>
