@@ -117,7 +117,10 @@ namespace Municipal_App.Windows
 
             HashSet<Event> searchedEvents = Search(searchValue);
 
-            UserSearches.Add(searchValue);
+            if (searchedEvents.Count != 0)
+            {
+                UserSearches.Add(searchValue);
+            }
 
             PopulateStackPanel(searchedEvents);
 
