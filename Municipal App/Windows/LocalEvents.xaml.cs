@@ -19,7 +19,9 @@ namespace Municipal_App.Windows
     {
 
         Dictionary<string, Event> Events = new();
-        Stack<Event> EventStack = new();
+        Queue<Event> EventStack = new();
+        HashSet<string> UserSearches = new();
+        HashSet<Event> RecommendedEvents = new();
 
         public LocalEvents()
         {
@@ -31,7 +33,9 @@ namespace Municipal_App.Windows
 
         private void btnBack_Click_1(object sender, RoutedEventArgs e)
         {
-
+            Window win = new MainWindow();
+            win.Show();
+            this.Hide();
         }
 
         private void InitialiseDictionary()
@@ -54,7 +58,7 @@ namespace Municipal_App.Windows
 
             for (int i = 0; i < 3; i++)
             {
-                Event localEvent = EventStack.Pop();
+                Event localEvent = EventStack.Dequeue();
 
                 TextBlock textBlock = new TextBlock()
                 {
@@ -86,7 +90,7 @@ namespace Municipal_App.Windows
         {
             foreach (var item in Events.Values)
             {
-                EventStack.Push(item);
+                EventStack.Enqueue(item);
             }
         }
 
@@ -97,7 +101,14 @@ namespace Municipal_App.Windows
 
         private void GetRecommeneded()
         {
-            //TODO
+            if (UserSearches == null) return;
+
+            foreach (string search in UserSearches)
+            {
+                if (Events == null) return;
+
+                RecommendedEvents.Add(Events.Values.FirstOrDefault(e => e.Name.Contains(search, StringComparison.OrdinalIgnoreCase)));
+            }
         }
 
         private void btnSearch_Click(object sender, RoutedEventArgs e)
@@ -106,14 +117,72 @@ namespace Municipal_App.Windows
 
             HashSet<Event> searchedEvents = Search(searchValue);
 
+            UserSearches.Add(searchValue);
+
             PopulateStackPanel(searchedEvents);
+
         }
 
         private void PopulateStackPanel(HashSet<Event> eventHash)
         {
             spEvents.Children.Clear();
 
-            foreach(Event localEvent in eventHash)
+            foreach (Event localEvent in eventHash)
+            {
+                TextBlock textBlock = new TextBlock()
+                {
+                    Text = $"Join us for {localEvent.Name} on {localEvent.EventDate:MMMM dd, yyyy}\n" +
+                    $"At {localEvent.Location}",
+                    Foreground = Brushes.Black,
+                    FontSize = 14,
+                    HorizontalAlignment = HorizontalAlignment.Center,
+                    VerticalAlignment = VerticalAlignment.Center
+                };
+
+                Border border = new Border
+                {
+                    Child = textBlock,
+                    BorderBrush = Brushes.Black,
+                    BorderThickness = new Thickness(2),
+                    Background = Brushes.LightCyan,
+                    Padding = new Thickness(5),
+                    Margin = new Thickness(10)
+                };
+
+
+                spEvents.Children.Add(border);
+            }
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            GetRecommeneded();
+
+            spEvents.Children.Clear();
+
+            TextBlock headingBlock = new TextBlock()
+            {
+                Text = $"Recommended Events",
+                Foreground = Brushes.Black,
+                FontSize = 14,
+                HorizontalAlignment = HorizontalAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center
+            };
+
+            Border headingBorder = new Border
+            {
+                Child = headingBlock,
+                BorderBrush = Brushes.Black,
+                BorderThickness = new Thickness(2),
+                Background = Brushes.LightCyan,
+                Padding = new Thickness(5),
+                Margin = new Thickness(10)
+            };
+
+
+            spEvents.Children.Add(headingBorder);
+
+            foreach (Event localEvent in RecommendedEvents)
             {
                 TextBlock textBlock = new TextBlock()
                 {

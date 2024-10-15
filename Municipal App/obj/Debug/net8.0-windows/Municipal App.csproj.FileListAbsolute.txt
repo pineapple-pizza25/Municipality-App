@@ -1,11 +1,3 @@
-C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.csproj.AssemblyReference.cache
-C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\LocalEvents.g.cs
-C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\MainWindow.g.cs
-C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\NotificationsWindow.g.cs
-C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\ReportIssuesWindow.g.cs
-C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\App.g.cs
-C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App_MarkupCompile.cache
-C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App_MarkupCompile.lref
 C:\Users\snmis\source\repos\Municipal App\Municipal App\bin\Debug\net8.0-windows\Municipal App.exe
 C:\Users\snmis\source\repos\Municipal App\Municipal App\bin\Debug\net8.0-windows\Municipal App.deps.json
 C:\Users\snmis\source\repos\Municipal App\Municipal App\bin\Debug\net8.0-windows\Municipal App.runtimeconfig.json
@@ -16,6 +8,14 @@ C:\Users\snmis\source\repos\Municipal App\Municipal App\bin\Debug\net8.0-windows
 C:\Users\snmis\source\repos\Municipal App\Municipal App\bin\Debug\net8.0-windows\Microsoft.Toolkit.Uwp.Notifications.dll
 C:\Users\snmis\source\repos\Municipal App\Municipal App\bin\Debug\net8.0-windows\Microsoft.Xaml.Behaviors.dll
 C:\Users\snmis\source\repos\Municipal App\Municipal App\bin\Debug\net8.0-windows\Notification.Wpf.dll
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.csproj.AssemblyReference.cache
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\LocalEvents.g.cs
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\MainWindow.g.cs
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\NotificationsWindow.g.cs
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\ReportIssuesWindow.g.cs
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App_MarkupCompile.cache
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App_MarkupCompile.lref
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\App.baml
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\LocalEvents.baml
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\MainWindow.baml

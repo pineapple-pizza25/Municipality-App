@@ -10,24 +10,19 @@
     Height="550"
     AllowsTransparency="False"
     ResizeMode="CanResize"
-    mc:Ignorable="d">
-
-
+    mc:Ignorable="d"
+    RenderTransformOrigin="0.5,0.5">
     <Window.Background>
         <ImageBrush ImageSource="..\Images\background.jpg" Stretch="UniformToFill" />
     </Window.Background>
-
     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-
-
-        <Grid>
-
+        <Grid RenderTransformOrigin="0.5,0.5">
             <Rectangle
                 Height="120"
                 VerticalAlignment="Top"
                 Fill="#2D9CDB"
-                Opacity="0.8" />
-
+                Opacity="0.8"
+                RenderTransformOrigin="0.5,0.5" />
             <TextBlock
                 Margin="0,20,0,0"
                 HorizontalAlignment="Center"
@@ -36,26 +31,45 @@
                 FontSize="50"
                 FontWeight="Bold"
                 Foreground="White"
-                Text="Local Events" />
-
+                Text="Local Events"
+                RenderTransformOrigin="0.5,0.5" />
             <TextBox
                 x:Name="txtSearch"
                 Width="200"
-                Height="30" Margin="88,145,512,359"/>
-
+                Height="30" 
+                Margin="88,145,512,359"
+                RenderTransformOrigin="0.5,0.5"/>
             <Button
                 x:Name="btnSearch"
                 Width="75"
                 Height="28"
-                Content="Search" Margin="288,145,412,359" Click="btnSearch_Click" />
-
+                Content="Search" 
+                Margin="288,145,412,359" 
+                Click="btnSearch_Click"
+                RenderTransformOrigin="0.5,0.5" />
             <StackPanel
                 x:Name="spEvents"
                 Margin="88,180,425,55"
                 Background="White"
                 Opacity="0.8"
-                RenderTransformOrigin="0.509,0.514" />
+                RenderTransformOrigin="0.5,0.5" />
 
+            <Button
+                x:Name="btnClear"
+                Width="100"
+                Height="40"
+                Margin="150,484,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Background="#2D9CDB"
+                BorderBrush="Transparent"
+                Content="Clear"
+                FontFamily="{StaticResource InterVariable}"
+                FontSize="16"
+                FontWeight="Bold"
+                Foreground="White"
+                Opacity="0.8"
+                RenderTransformOrigin="0.5,0.5" Click="btnClear_Click"/>   
             <Button
                 x:Name="btnBack"
                 Width="100"
@@ -72,9 +86,7 @@
                 FontWeight="Bold"
                 Foreground="White"
                 Opacity="0.8"
-                RenderTransformOrigin="0.575,1.814" />
-
+                RenderTransformOrigin="0.5,0.5" />
         </Grid>
-
     </ScrollViewer>
 </Window>
