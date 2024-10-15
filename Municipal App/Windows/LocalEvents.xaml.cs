@@ -90,14 +90,54 @@ namespace Municipal_App.Windows
             }
         }
 
-        private IEnumerable<Event> Search(string searchValue)
+        private HashSet<Event> Search(string searchValue)
         {
-            return Events.Values.Where(e => e.Name.Contains(searchValue, StringComparison.OrdinalIgnoreCase));
+            return new HashSet<Event>(Events.Values.Where(e => e.Name.Contains(searchValue, StringComparison.OrdinalIgnoreCase)));
         }
 
         private void GetRecommeneded()
         {
             //TODO
+        }
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            string searchValue = txtSearch.Text;
+
+            HashSet<Event> searchedEvents = Search(searchValue);
+
+            PopulateStackPanel(searchedEvents);
+        }
+
+        private void PopulateStackPanel(HashSet<Event> eventHash)
+        {
+            spEvents.Children.Clear();
+
+            foreach(Event localEvent in eventHash)
+            {
+                TextBlock textBlock = new TextBlock()
+                {
+                    Text = $"Join us for {localEvent.Name} on {localEvent.EventDate:MMMM dd, yyyy}\n" +
+                    $"At {localEvent.Location}",
+                    Foreground = Brushes.Black,
+                    FontSize = 14,
+                    HorizontalAlignment = HorizontalAlignment.Center,
+                    VerticalAlignment = VerticalAlignment.Center
+                };
+
+                Border border = new Border
+                {
+                    Child = textBlock,
+                    BorderBrush = Brushes.Black,
+                    BorderThickness = new Thickness(2),
+                    Background = Brushes.LightCyan,
+                    Padding = new Thickness(5),
+                    Margin = new Thickness(10)
+                };
+
+
+                spEvents.Children.Add(border);
+            }
         }
     }
 }

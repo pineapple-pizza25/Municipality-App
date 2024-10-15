@@ -38,6 +38,17 @@
                 Foreground="White"
                 Text="Local Events" />
 
+            <TextBox
+                x:Name="txtSearch"
+                Width="200"
+                Height="30" Margin="88,145,512,359"/>
+
+            <Button
+                x:Name="btnSearch"
+                Width="75"
+                Height="28"
+                Content="Search" Margin="288,145,412,359" Click="btnSearch_Click" />
+
             <StackPanel
                 x:Name="spEvents"
                 Margin="88,180,425,55"
