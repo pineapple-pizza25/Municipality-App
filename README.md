@@ -11,7 +11,7 @@
 ---
 
 ## About the Project
-The payment gateway is intended to be as secure as possible thanks to uses of cyber security techniques
+This project was built as an application for members of a municipality to report issues and complaints aswell as view local events. The application is still in the development phase and can only be used to report issues.
 
 ## Features
 - Report issues to your local municipality.
