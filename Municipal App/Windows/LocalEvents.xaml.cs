@@ -39,6 +39,10 @@ namespace Municipal_App.Windows
             this.Hide();
         }
 
+
+        /*
+         * Initialise dictionary with event info
+         */
         private void InitialiseDictionary()
         {
             Events.Add("2024-10-20_Beach_Marathon", new Event("Beach Marathon", "North Beach", new DateOnly(2024, 10, 20), new TimeOnly(7, 0), "Sports"));
@@ -68,14 +72,20 @@ namespace Municipal_App.Windows
             PopulateComboBox();
         }
 
+        /*
+         * populate the combobox with unique catgories
+         */
         private void PopulateComboBox()
         {
             cmbCategory.ItemsSource = CategoriesSet;
         }
 
+        /*
+         * Displays the 3 upcoming events to a user  by useing a queuse
+         */
         private void LoadEvents()
         {
-            InitialisStack();
+            InitialisQueue();
 
             for (int i = 0; i < 3; i++)
             {
@@ -117,7 +127,10 @@ namespace Municipal_App.Windows
 
         }
 
-        private void InitialisStack()
+        /*
+         * transfers the contents of the distionary to a queue
+         */
+        private void InitialisQueue()
         {
             foreach (var item in Events.Values)
             {
@@ -125,11 +138,17 @@ namespace Municipal_App.Windows
             }
         }
 
+        /*
+         * searchs for events by name
+         */
         private HashSet<Event> Search(string searchValue)
         {
             return new HashSet<Event>(Events.Values.Where(e => e.Name.Contains(searchValue, StringComparison.OrdinalIgnoreCase)));
         }
 
+        /*
+         * searches for events by category
+         */
         private HashSet<Event> SearchByCategory(string searchValue)
         {
             return new HashSet<Event>(Events.Values.Where(e => e.Category.Contains(searchValue, StringComparison.OrdinalIgnoreCase)));
@@ -162,6 +181,9 @@ namespace Municipal_App.Windows
 
         }
 
+        /*
+         * loads stack panel with new values after a search
+         */
         private void PopulateStackPanel(HashSet<Event> eventHash)
         {
             spEvents.Children.Clear();
@@ -204,9 +226,14 @@ namespace Municipal_App.Windows
         }
 
 
-        //https://learn.microsoft.com/en-us/dotnet/desktop/wpf/controls/how-to-use-the-image-element?view=netframeworkdesktop-4.8
+        /* used to sho the details of an event
+         */
+        //Author: Microsoft
+        //Published: 2024
+        //avilable: https://learn.microsoft.com/en-us/dotnet/desktop/wpf/controls/how-to-use-the-image-element?view=netframeworkdesktop-4.8
         public void PopulateDetailsStackPanel(Event localEvent)
         {
+
             spEventDetails.Children.Clear();
 
             Image myImage = new Image();
@@ -251,8 +278,13 @@ namespace Municipal_App.Windows
             spEventDetails.Children.Add(eventDetails);
         }
 
+        /*
+         * The clear button also loads recommended events
+         */
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
+
+            txtSearch.Clear();
             GetRecommeneded();
 
             spEvents.Children.Clear();

@@ -28,7 +28,6 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Header (spans both columns) -->
         <Rectangle Grid.ColumnSpan="2" Fill="#2D9CDB" Opacity="0.8"/>
         <TextBlock Text="Local Events" 
                FontFamily="{StaticResource InterVariable}"
@@ -36,7 +35,6 @@
                HorizontalAlignment="Center" VerticalAlignment="Center"
                Grid.ColumnSpan="2"/>
 
-        <!-- Search and Filter (spans both columns) -->
         <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" Margin="10">
             <TextBox x:Name="txtSearch" Width="195" Height="30" Margin="0,0,10,0"/>
             <Button x:Name="btnSearch" Content="Search" Click="btnSearch_Click"
@@ -50,17 +48,14 @@
                   Text="Select a Category" ToolTip="Select Category"/>
         </StackPanel>
 
-        <!-- Event List -->
         <ScrollViewer Grid.Row="2" Grid.Column="0" Margin="10">
             <StackPanel x:Name="spEvents" Background="White" Opacity="0.8"/>
         </ScrollViewer>
 
-        <!-- Event Details -->
         <ScrollViewer Grid.Row="2" Grid.Column="1" Margin="10">
             <StackPanel x:Name="spEventDetails" Background="White" Opacity="0.8"/>
         </ScrollViewer>
 
-        <!-- Buttons (spans both columns) -->
         <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" 
                 HorizontalAlignment="Center" Margin="0,10">
             <Button x:Name="btnBack" Content="Back" Click="btnBack_Click_1"
