@@ -88,11 +88,24 @@
                 </FlowDocument>
             </RichTextBox>
 
+            <TextBox
+                x:Name="txtPriority"
+                Width="240"
+                Margin="155,421,0,0"
+                Padding="8"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                BorderBrush="#2D9CDB"
+                BorderThickness="2"
+                FontFamily="{StaticResource InterVariable}"
+                FontSize="16"
+                ToolTip="Enter location" />
+
             <Button
                 x:Name="btnSubmit"
                 Width="200"
                 Height="50"
-                Margin="170,430,0,0"
+                Margin="155,474,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Background="#2D9CDB"
@@ -206,6 +219,14 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Content="Enter the description:"
+                FontFamily="{StaticResource InterVariable}"
+                FontSize="16" />
+            <Label
+                x:Name="label4"
+                Margin="155,392,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Priority (Enter a Number):"
                 FontFamily="{StaticResource InterVariable}"
                 FontSize="16" />
         </Grid>

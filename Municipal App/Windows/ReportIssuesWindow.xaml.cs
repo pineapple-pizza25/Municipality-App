@@ -55,8 +55,10 @@ namespace Municipal_App.Windows
             string location = txtLocation.Text;
             string category = cmbCategory.Text;
             string description = ConvertRichTextBoxContentsToString(rtbDetails);
+            string priorityString = txtPriority.Text;
+            int priorityNum = 1;
 
-            if (location == "" || category == "" || description == "")
+            if (location == "" || category == "" || description == "" || priorityString =="")
             {
                 lblFeedback.Background = new SolidColorBrush(Colors.Black);
                 lblFeedback.Foreground = new SolidColorBrush(Colors.Red);
@@ -66,10 +68,23 @@ namespace Municipal_App.Windows
                 return;
             }
 
+            try
+            {
+                priorityNum = Convert.ToInt32(priorityString);
+            }catch {
+                lblFeedback.Background = new SolidColorBrush(Colors.Black);
+                lblFeedback.Foreground = new SolidColorBrush(Colors.Red);
+                lblFeedback.Content = "Invalid priority. Please enter a number";
+
+                ShowFailureNotification(new NotificationManager());
+                return;
+            }
+
+
             if (selectedImage == null)
             {
-                //issues.Add(new Issue(location, category, description));
-                tree.AddChildToNode(category, new Issue(location, category, description));
+                issues.Add(new Issue(location, category, description, priorityNum));
+                tree.AddChildToNode(category, new Issue(location, category, description, priorityNum));
                 CheckTree();
 
                 issues.Add(new Issue(location, category, description));
@@ -77,8 +92,8 @@ namespace Municipal_App.Windows
             }
             else
             {
-                tree.AddChildToNode(category, new Issue(location, category, description, selectedImage));
-                issues.Add(new Issue(location, category, description, selectedImage));
+                tree.AddChildToNode(category, new Issue(location, category, description, selectedImage, priorityNum));
+                issues.Add(new Issue(location, category, description, selectedImage, priorityNum));
                 notifications.Add(new Issue(location, category, description, selectedImage));
             }
 
@@ -201,7 +216,7 @@ namespace Municipal_App.Windows
             categories.Add(new Category() { Name = "Roads", Value = "Roads" });
             categories.Add(new Category() { Name = "Water", Value = "Water" });
             categories.Add(new Category() { Name = "Electricity", Value = "Electricity" });
-            categories.Add(new Category() { Name = "Sanitaion", Value = "Sanitaion" });
+            categories.Add(new Category() { Name = "Sanitation", Value = "Sanitation" });
             categories.Add(new Category() { Name = "Other", Value = "Other" });
             _categories = new CollectionView(categories);
         }

@@ -67,6 +67,30 @@
                 </Button.Resources>
             </Button>
 
+            <Button
+                x:Name="btnPrioritise"
+                Width="128"
+                Height="45"
+                Margin="662,151,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Background="#2D9CDB"
+                BorderBrush="Transparent"
+                Content="Sort by priority"
+                FontFamily="{StaticResource InterVariable}"
+                FontSize="16"
+                FontWeight="Bold"
+                Foreground="White"
+                Opacity="0.8"
+                RenderTransformOrigin="0.575,1.814" Click="btnPrioritise_Click">
+
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20" />
+                    </Style>
+                </Button.Resources>
+            </Button>
+
 
         </Grid>
     </ScrollViewer>

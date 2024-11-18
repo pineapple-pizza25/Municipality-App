@@ -49,7 +49,7 @@ namespace Municipal_App.Windows
 
         private void btnStatus_Click(object sender, RoutedEventArgs e)
         {
-            NotificationsWindow win = new NotificationsWindow();
+            RequestStatusWindow win = new RequestStatusWindow();
             win.Show();
             this.Hide();
         }

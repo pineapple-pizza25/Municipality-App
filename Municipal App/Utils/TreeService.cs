@@ -8,6 +8,12 @@ namespace Municipal_App.Utils
 {
     class TreeService<T>
     {
+
+        //Title: Singleton Design Pattern in C# - Do it THAT way
+        //Author: tutorialsEU - C#
+        //Date: 24 November 2022
+        //Availabilty: https://www.youtube.com/watch?v=r6Y0SmbufmU&t=614s
+
         private TreeService() { }
 
         private static Tree<object> _instance;
@@ -25,10 +31,12 @@ namespace Municipal_App.Utils
                         var category2 = new TreeNode<object>("Water");
                         var category3 = new TreeNode<object>("Roads");
                         var category4 = new TreeNode<object>("Sanitation");
+                        var category5 = new TreeNode<object>("Other");
                         _instance.Root.AddChild(category);
                         _instance.Root.AddChild(category2);
                         _instance.Root.AddChild(category3);
                         _instance.Root.AddChild(category4);
+                        _instance.Root.AddChild(category5);
                     }
                 }
             }
@@ -38,5 +46,3 @@ namespace Municipal_App.Utils
 
     }
 }
-
-//https://www.youtube.com/watch?v=r6Y0SmbufmU&t=614s

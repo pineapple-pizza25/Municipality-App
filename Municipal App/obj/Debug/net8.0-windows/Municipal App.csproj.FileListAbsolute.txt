@@ -13,6 +13,7 @@ C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\MainWindow.g.cs
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\NotificationsWindow.g.cs
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\ReportIssuesWindow.g.cs
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\RequestStatusWindow.g.cs
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App_MarkupCompile.cache
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App_MarkupCompile.lref
@@ -21,6 +22,7 @@ C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\MainWindow.baml
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\NotificationsWindow.baml
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\ReportIssuesWindow.baml
+C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\RequestStatusWindow.baml
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.g.resources
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.AssemblyInfoInputs.cache
@@ -33,5 +35,3 @@ C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.pdb
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Municipal App.genruntimeconfig.cache
 C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\ref\Municipal App.dll
-C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\RequestStatusWindow.g.cs
-C:\Users\snmis\source\repos\Municipal App\Municipal App\obj\Debug\net8.0-windows\Windows\RequestStatusWindow.baml

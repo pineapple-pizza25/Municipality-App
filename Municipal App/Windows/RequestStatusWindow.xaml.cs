@@ -21,10 +21,13 @@ namespace Municipal_App.Windows
     public partial class RequestStatusWindow : Window
     {
         Tree<object> tree = TreeService<object>.Instance();
+        private PriorityQueue<Issue, int> issueQueue = new PriorityQueue<Issue, int>();
 
         public RequestStatusWindow()
         {
             InitializeComponent();
+
+            DisplayIssues();
         }
 
         private void btnBack_Click_1(object sender, RoutedEventArgs e)
@@ -34,6 +37,9 @@ namespace Municipal_App.Windows
             this.Hide();
         }
 
+        /*
+         * Displays issues in the tree
+         */
         private void DisplayIssues()
         {
             var dept2Nodes = new List<TreeNode<Issue>>();
@@ -44,31 +50,74 @@ namespace Municipal_App.Windows
             {
                 Issue issue = node.Data;
 
-                TextBlock textBlock = new TextBlock()
-                {
-                    Text = "You successfully reported an issue regarding " +
-                     issue.Category + " at " + issue.Location,
-                    Foreground = Brushes.Black,
-                    FontSize = 14,
-                    HorizontalAlignment = HorizontalAlignment.Center,
-                    VerticalAlignment = VerticalAlignment.Center
-                };
-
-                Border border = new Border
-                {
-                    Child = textBlock,
-                    BorderBrush = Brushes.Blue,
-                    BorderThickness = new Thickness(2),
-                    Background = Brushes.LightCyan,
-                    Padding = new Thickness(5),
-                    Margin = new Thickness(10)
-                };
-
-
-                spIssues.Children.Add(border);
+                populateStackPanel(issue);
             }
 
         }
 
+        private void PopulateQueue()
+        {
+            var dept2Nodes = new List<TreeNode<Issue>>();
+
+            tree.GetNodesAtDepth(tree.Root, 2, 0, dept2Nodes);
+
+            foreach (var node in dept2Nodes)
+            {
+                Issue issue = node.Data;
+
+                issueQueue.Enqueue( issue, issue.Priority);
+
+            }
+
+        }
+
+        /*
+         * Displays issues in the priority queue
+         */
+        private void DisplayIssuesByPriority()
+        {
+            spIssues.Children.Clear();
+
+            PopulateQueue();
+
+            while (issueQueue.Count > 0)
+            {
+                Issue issue = issueQueue.Dequeue();
+
+                populateStackPanel(issue);
+            }
+        }
+
+        private void populateStackPanel(Issue issue)
+        {
+            TextBlock textBlock = new TextBlock()
+            {
+                Text = "Category: " + issue.Category +
+                    "\nLocation: " + issue.Location +
+                    "\nStatus: " + issue.Status,
+                Foreground = Brushes.Black,
+                FontSize = 14,
+                HorizontalAlignment = HorizontalAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center
+            };
+
+            Border border = new Border
+            {
+                Child = textBlock,
+                BorderBrush = Brushes.Blue,
+                BorderThickness = new Thickness(2),
+                Background = Brushes.LightCyan,
+                Padding = new Thickness(5),
+                Margin = new Thickness(10)
+            };
+
+
+            spIssues.Children.Add(border);
+        }
+
+        private void btnPrioritise_Click(object sender, RoutedEventArgs e)
+        {
+            DisplayIssuesByPriority();
+        }
     }
 }
