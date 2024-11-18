@@ -16,6 +16,9 @@
     <Compile Update="Windows\ReportIssuesWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Windows\RequestStatusWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Windows\LocalEvents.xaml">
@@ -28,6 +31,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\ReportIssuesWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\RequestStatusWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

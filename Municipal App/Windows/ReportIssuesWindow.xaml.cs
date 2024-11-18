@@ -19,6 +19,8 @@ using Notification.Wpf;
 using Microsoft.Win32;
 using Color = System.Drawing.Color;
 using Microsoft.Toolkit.Uwp.Notifications;
+using Municipal_App.Utils;
+using System.Diagnostics;
 //using Color = System.Windows.Media.Color;
 
 namespace Municipal_App.Windows
@@ -28,6 +30,8 @@ namespace Municipal_App.Windows
     /// </summary>
     public partial class ReportIssuesWindow : Window
     {
+        Tree<object> tree = TreeService<object>.Instance();
+
         public static List<Issue> issues = new List<Issue>();
 
         //List used for notifictions
@@ -43,7 +47,6 @@ namespace Municipal_App.Windows
 
             ConnectionViewModel vm = new ConnectionViewModel();
             DataContext = vm;
-
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
@@ -65,11 +68,16 @@ namespace Municipal_App.Windows
 
             if (selectedImage == null)
             {
+                //issues.Add(new Issue(location, category, description));
+                tree.AddChildToNode(category, new Issue(location, category, description));
+                CheckTree();
+
                 issues.Add(new Issue(location, category, description));
                 notifications.Add(new Issue(location, category, description));
             }
             else
             {
+                tree.AddChildToNode(category, new Issue(location, category, description, selectedImage));
                 issues.Add(new Issue(location, category, description, selectedImage));
                 notifications.Add(new Issue(location, category, description, selectedImage));
             }
@@ -116,6 +124,16 @@ namespace Municipal_App.Windows
             MainWindow win = new MainWindow();
             win.Show();
             this.Hide();
+        }
+
+
+        //check values in tree
+        private void CheckTree()
+        {
+            tree.Traverse(tree.Root, data =>
+            {
+                System.Diagnostics.Trace.WriteLine(data);
+            });
         }
 
 

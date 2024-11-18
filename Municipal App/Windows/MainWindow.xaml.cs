@@ -49,7 +49,9 @@ namespace Municipal_App.Windows
 
         private void btnStatus_Click(object sender, RoutedEventArgs e)
         {
-            ShowFailureNotification(new NotificationManager());
+            NotificationsWindow win = new NotificationsWindow();
+            win.Show();
+            this.Hide();
         }
 
 

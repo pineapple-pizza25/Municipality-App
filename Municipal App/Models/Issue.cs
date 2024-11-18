@@ -28,5 +28,10 @@ namespace Municipal_App
             this.Description = description;
             this.Image = image;
         }
+
+        public override string ToString()
+        {
+            return $"Location: {Location}, Category: {Category}, Description: {Description}";
+        }
     }
 }

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\snmis\source\repos\Municipal App\Municipal App\App.xaml
-4298598829
+51991418170
 
-12-593153436
+16-1505033688
 203-1889465529
-Windows\LocalEvents.xaml;Windows\MainWindow.xaml;Windows\NotificationsWindow.xaml;Windows\ReportIssuesWindow.xaml;
+Windows\LocalEvents.xaml;Windows\MainWindow.xaml;Windows\NotificationsWindow.xaml;Windows\ReportIssuesWindow.xaml;Windows\RequestStatusWindow.xaml;
 
-False
+True
 
